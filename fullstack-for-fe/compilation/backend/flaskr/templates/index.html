@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FlaskApp</title>
+  </head>
+  <body>
+  <form method="post" action="{{ action }}">
+      <label for="long_url">Url to shorten -  https://</label>
+      <input name="long_url" id="long_url" required>
+      <input type="submit" value="Get short url">
+  </form>
+  {% if 'long_url' in url_data %}
+      <div>Your url was shorten-ed from</div>
+      <div>{{ url_data['long_url'] }}</div>
+      <div>to:</div>
+      <div>{{ url_data['short_url'] }}</div>
+  {% endif %}
+
+  </body>
+</html>

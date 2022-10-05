@@ -1,0 +1,1 @@
+- [Crash course](https://news.ycombinator.com/item?id=32213066)

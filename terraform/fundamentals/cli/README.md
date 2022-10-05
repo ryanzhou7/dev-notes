@@ -1,0 +1,4 @@
+- Core terraform workflow 3 steps
+- Init: prepare directory
+- Plan: preview changes
+- Apply: make change

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-webapp
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: simple-webapp
+    spec:
+      containers:
+        - name: simple-webapp
+          image: training/webapp
+          ports:
+            - containerPort: 5000
+  selector:
+    matchLabels:
+      app: simple-webapp

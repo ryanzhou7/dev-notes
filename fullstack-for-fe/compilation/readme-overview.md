@@ -1,0 +1,124 @@
+- Overview
+  - 0 to unicorn in AWS
+  - Modern cloud stack dev
+  - Full stack for FE & DevOps for senior dev
+  - Intro to system design
+- Intro to backend development
+  - Tinyurl
+  - Flask, dictionary
+  - Sqlite
+    - schema
+  - Prod - build, $10
+  - Back end development
+    - routes
+    - do some stuff, CRUD
+      - Data interface
+      - Database driver
+      - ORM
+      - https://codebase.show/projects/realworld?category=backend
+- Intro to devOps and the cloud and containers
+  - Server / AWS - devops
+    - ssh
+    - deploy scp & do something
+    - systemctl
+    - Linux
+  - Terraform
+    - IAC: reusable, repeatable
+  - Intro system design & databases (with tf)
+  - Vertical scaling
+    - cpu
+    - ebs
+  - Database
+    - local
+  - Docker
+    - historical
+    - below the hood - hypervisor
+    - practical
+    - Clean, reliable
+  - [ ] PG admin / vs code - dba
+  - [ ] Code changes / abstraction
+  - AWS RDS
+    - Security group
+    - terraform
+    - local connect
+    - ec2 connect
+    - ec2 redeploy
+    - Managed vs not?
+  - Horizontal scaling
+    - Limits of vertical scaling
+    - [ ] Terraform replication
+    - https://www.section.io/engineering-education/how-to-replicate-postgresql-database/
+    - https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PostgreSQL.Replication.ReadReplicas.html#USER_PostgreSQL.Replication.ReadReplicas.Limitations
+    - https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html
+  - [ ] Caching
+    - [ ] elasticache
+    - [ ] local
+    - [ ] code logic
+    - [ ] terraform
+  - [ ] Horizontal scaling servers
+    - [ ] load balancer
+    - [ ] log IP hit
+- Intro frontend CI/CD and deployment
+  - FE scaling / S3
+    - could scale to more servers, $$$
+    - bench mark
+  - Super simple FE
+    - S3 = website
+    - terraform
+    - deploy console
+    - bench mark
+  - AWS CLI
+    - [ ] IAM
+  - Cloud front
+    - bench mark fail
+    - [ ] http1 vs 2, tcp / udp
+    - bench mark pass
+  - react-vite
+    - [ ] local, form
+    - react build, env var
+    - S3 deploy & CF, terraform
+  - CI / CD
+    - Github actions
+    - IAM more restrictive
+    - Deploy
+  - [ ] Bonus section - lambdas
+    - Scaling up and down...
+  - [ ] Elastic bean stalk / orchestration?
+    - vs k8s
+    - container efficiency
+- A brief container ecosystem introduction
+  - Containerization
+    - why?
+    - [ ] ECR - terraform, push BE
+    - [ ] ECS - terraform, push BE
+  - [ ] k8 Local
+    - kubectl
+  - [ ] EKS
+    - [ ] terraform + deploy
+- Everything you wanted to know and more, horizon, the landscape
+  - [ ] Cloud native
+    - database: postgres, neo4j
+    - streaming: Kafka
+    - Application def & image build: docker compose
+    - CI/CD: Jenkins, GH actions
+    - Orchestration: k8
+    - Coordination: AWS cloud map
+    - RPC: gRPC
+    - Service proxy: Nginx
+    - API gateway: aws not here
+    - Service mesh: AWS App mesh
+    - CN storage: AWS EBS
+    - Container runtime: ECS, EKS
+    - CN network: Antrea b/c k8
+    - Automation & configuration: Terraform
+    - Container registry: ECR
+    - Security & compliance: snyk
+    - Key management: vault - hashiCorp
+    - Monitoring: Prometheus, cloudwatch, Datadog, Dynatrace, Grafana, Sentry
+    - Logging: Elastic, Splunk
+    - Tracing: Skip, distributed tracing?
+    - Chaos engineering: Gremlin? or incubating ones?
+    - CO: ??
+- [ ] Bonus Networking (swap with top?)
+  - [ ] 101
+  - [ ] VPCSs

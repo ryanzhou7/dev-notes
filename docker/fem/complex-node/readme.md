@@ -1,0 +1,3 @@
+- `cd complex-node`
+- `npm install -g express-generator@4`
+- `express .`

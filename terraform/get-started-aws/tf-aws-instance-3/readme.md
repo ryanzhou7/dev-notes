@@ -1,0 +1,3 @@
+- init, apply, create output, this captures the AWS returned values?
+- `terraform apply`
+- `terraform output`

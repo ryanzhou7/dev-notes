@@ -1,0 +1,3 @@
+- https://aws.amazon.com/getting-started/hands-on/amazon-eks-with-spot-instances/?trk=gs_card
+- https://aws.amazon.com/getting-started/guides/deploy-webapp-eks/
+  - Via JS CDK

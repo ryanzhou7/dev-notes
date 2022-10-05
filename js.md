@@ -1,0 +1,2 @@
+- [Event loop](https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif)
+- [Promise visualized](https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)

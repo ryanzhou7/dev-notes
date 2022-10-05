@@ -1,0 +1,5 @@
+- `terraform init`
+- `terraform apply`
+- `aws eks update-kubeconfig --region us-west-1 --name terraform-learning`
+- `kubectl get nodes`
+- ` terraform destroy`

@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    build: ./Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/node/code # like bind mount, . in .: just says current dir mount it
+      - /home/node/code/node_modules # don't bring this?
+    links:
+      - db # db service, order doesn't matter docker will start db first
+    environment:
+      MONGO_CONNECTION_STRING: mongodb://db:27017
+  db:
+    image: mongo:3 # just the base mongo 3
