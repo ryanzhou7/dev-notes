@@ -1,17 +1,32 @@
 import sqlite3
 import click
 from flask import current_app, g
-from flaskr import v2
+from flaskr import data
+
+from flaskr import app
+import os
+
+app.config.from_mapping(
+    SECRET_KEY='dev',
+    DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
+)
+
+app.config.from_pyfile('config.py', silent=True)
+
+# ensure the instance folder exists
+try:
+    os.makedirs(app.instance_path)
+except OSError:
+    pass
 
 name = 'db2'
-
 
 def init_app(app):
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
 
 
-@v2.bp.cli.command('init-db')
+@data.bp.cli.command('init-db')
 def init_db_command():
     """Clear the existing data and create new tables."""
     with current_app.open_resource('schema.sql') as f:
