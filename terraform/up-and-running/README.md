@@ -570,3 +570,40 @@ output "user_arns" {
 - using TF
 
 ## PROD grade TF code - modules
+
+- ![Prod-grade infra checklist](/assets/prod-grade-infra.png)
+- Reusable modules best practices
+  - small
+  - composable
+  - testable
+  - versionable
+- TF validation blocks
+
+```go
+variable "min_size" {
+  description = "The minimum number of EC2 Instances in the ASG"
+  type        = number
+
+  validation {
+    condition     = var.min_size > 0
+    error_message = "ASGs can't be empty or we'll have an outage!"
+  }
+
+  validation {
+    condition     = var.min_size <= 10
+    error_message = "ASGs must have 10 or fewer instances to keep costs down."
+  }
+}
+```
+
+- Also `precondition` / `postcondition`
+- `tfenv # to switch between Vs`
+- **provisioners**: are used to execute scripts either on the local machine or a remote machine when you run Terraform, typically to do the work of bootstrapping, configuration management, or cleanup
+
+## Testing TF
+
+- `cloud-nuke aws --older-than 48h`
+- `aws-nuke`
+- test via Terratest, go lib
+
+## TF as a team
