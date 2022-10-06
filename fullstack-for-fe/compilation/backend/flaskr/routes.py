@@ -2,10 +2,10 @@ from flask import request, render_template, redirect, url_for
 from markupsafe import escape
 import json
 import os.path
-from . import name, bp
+from flaskr import app
 
 
-@bp.route('/<string:short_url>')
+@app.route('/<string:short_url>')
 def redirect_to_long(short_url):
     long_url = get_long_url(short_url)
     if long_url:
@@ -22,12 +22,12 @@ def get_long_url(short_url: str):
     return None
 
 
-@bp.route('/urls/', methods=('POST', 'GET'))
+@app.route('/urls/', methods=('POST', 'GET'))
 def urls():
     url_data = {}
     if request.method == 'POST':
         url_data = save_url(request.form['long_url'])
-    return render_template("index.html", url_data=url_data, action=url_for(f'{name}.urls'))
+    return render_template("index.html", url_data=url_data, action=url_for('urls'))
 
 
 def save_url(long_url: str):
