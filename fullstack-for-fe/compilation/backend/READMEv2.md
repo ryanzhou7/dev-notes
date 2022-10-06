@@ -54,7 +54,6 @@
 ## V2
 
 - Uses a Sqlite, an SQL database engine meant to run on devices such as mobile phones, as opposed meant running on a server by itself
--
 
 - [Sql alchemy](https://www.compose.com/articles/using-postgresql-through-sqlalchemy/)
 - testdriven.io
